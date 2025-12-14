@@ -39,6 +39,52 @@
       outline: none;
     }
 
+    .search-row {
+      display: flex;
+      gap: 0.5rem;
+    }
+
+    .search-btn {
+      padding: 0 1rem;
+      border-radius: 12px;
+      border: none;
+      cursor: pointer;
+      background: rgb(235, 164, 11);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .search-btn img {
+      width: 20px;
+      height: 20px;
+    }
+
+    .search-btn:hover {
+      background: rgb(2, 13, 163);
+    }
+
+    /* LOADING TEXT */
+    .loading-text {
+      margin-top: 1rem;
+      font-size: 0.9rem;
+      letter-spacing: 1px;
+      display: none;
+    }
+
+    /* DOT MOVE */
+    .loading-text::after {
+      content: "";
+      animation: dots 1.5s infinite;
+    }
+
+    @keyframes dots {
+      0% { content: ""; }
+      25% { content: "."; }
+      50% { content: ".."; }
+      75% { content: "..."; }
+    }
+
     .result-box {
       margin-top: 2rem;
       padding: 1.5rem;
@@ -120,16 +166,26 @@
     <h1>Welcome to Student ID Database</h1>
     <p>-</p>
 
-    <input
-      type="text"
-      class="search-box"
-      id="studentInput"
-      placeholder="english / geo / math / music"
-      onkeyup="searchStudent()"
-      autocapitalize="none"
-      autocomplete="off"
-    />
+    <!-- SEARCH BAR + BUTTON -->
+    <div class="search-row">
+      <input
+        type="text"
+        class="search-box"
+        id="studentInput"
+        placeholder="english / geo / math / music"
+        autocapitalize="none"
+        autocomplete="off"
+      />
 
+      <button class="search-btn" onclick="searchStudent()">
+        <img src="./assets/search.png" alt="Search">
+      </button>
+    </div>
+
+    <!-- LOADING -->
+    <p id="loadingText" class="loading-text">Loading</p>
+
+    <!-- RESULT -->
     <div class="result-box" id="resultBox">
       <img id="resultImg" src="" alt="Result">
       <br>
@@ -137,6 +193,7 @@
         <button class="download-btn">Download File</button>
       </a>
     </div>
+
   </div>
 
   <script src="student-search.js"></script>
