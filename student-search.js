@@ -15,7 +15,7 @@ function searchStudent() {
   } else if (input === "music") {
     file = "MUSIC.png";
   } else if (input.length > 0) {
-    file = "error.png";
+    file = "error2.png";
   } else {
     box.style.display = "none";
     return;
@@ -31,3 +31,4 @@ function searchStudent() {
 box.style.opacity = "1";
 
 box.style.transform = "translateY(0)";
+
