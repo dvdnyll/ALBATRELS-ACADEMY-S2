@@ -7,13 +7,13 @@ function searchStudent() {
   let file = "";
 
   if (input === "english") {
-    file = "english.png";
+    file = "ENGLISH.png";
   } else if (input === "geo") {
-    file = "geo.png";
+    file = "GEO.png";
   } else if (input === "math") {
-    file = "math.png";
+    file = "MATH.png";
   } else if (input === "music") {
-    file = "music.png";
+    file = "MUSIC.png";
   } else if (input.length > 0) {
     file = "error.png";
   } else {
@@ -29,4 +29,5 @@ function searchStudent() {
 }
 
 box.style.opacity = "1";
+
 box.style.transform = "translateY(0)";
