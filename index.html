@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ALBATRELS ACADEMY</title>
+    <link rel="icon" href="./assets/profile-pic.png" type="image/x-icon" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="mediaqueries.css" />
+  </head>
+  <body>
+    <nav id="desktop-nav">
+      <div class="logo"></div>
+      <div>
+        <ul class="nav-links">
+          <li><a href="#about">ABOUT</a></li>
+          <li><a href="#experience">MAP</a></li>
+          <li><a href="#projects">STUDENTS</a></li>
+          <li><a href="#contact">SEBAT</a></li>
+        </ul>
+      </div>
+    </nav>
+    <nav id="hamburger-nav">
+      <div class="logo">
+      </div>      
+      <div class="hamburger-menu">
+        <div class="hamburger-icon" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="menu-links">
+          <li><a href="#about" onclick="toggleMenu()">ABOUT</a></li>
+          <li><a href="#experience" onclick="toggleMenu()">MAP</a></li>
+          <li><a href="#projects" onclick="toggleMenu()">STUDENTS</a></li>
+          <li><a href="#contact" onclick="toggleMenu()">SEBAT</a></li>
+        </div>
+      </div>
+    </nav>
+    <section id="profile">
+      <div class="section__pic-container">
+        <img src="./assets/profile-pic.png" alt="Albatrels Academy" />
+      </div>
+      <div class="section__text">
+        <p class="section__text__p1">7th Albatrels Open Member</p>
+        <h1 class="title">ALBATRELS ACADEMY</h1>
+        <p class="section__text__p2">Albatros, Petrels, Sebat</p>
+        <div class="btn-container">
+          <button
+            class="btn btn-color-2"
+            onclick="window.location.href='student-search.html'"
+          >
+            Get Student ID
+          </button>
+          <button class="btn btn-color-1" onclick="window.open('./assets/acessdenied.pdf')">
+            Final School Report
+          </button>
+        </div>
+      </div>
+    </section>
+    <section id="about">
+      <div class="section__pic-container"></div>
+      <div>
+      <div class="section-container">
+        <div class="section__pic-container">
+          <img
+            src="./assets/about-pic.png"
+            alt="Profile picture"
+            class="about-pic"
+          />
+        </div>
+        <div class="about-details-container">
+          <div class="text-container">
+            <p>
+            <h1>Welcome to Albatrels.</h1>
+            <p>
+            Take control of Albatrels Academy as Jimmy Hopkins, a rebellious teenager who must navigate various challenges in a boarding school full of turmoil, where liars, cheaters, and arrogant individuals are the most renowned among students and staff. Face off against bullies from music class, win favor with teachers by helping them out, and participate in extracurricular activities outside the campus around Albatrels City—all while learning to survive the school year and ultimately becoming the ruler of the school.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    </section>
+    <section id="experience">
+      <p class="section__text__p1">MAP</p>
+      <h1 class="title">What does this school look like?</h1>
+      <div class="experience-details-container">
+      <img src="./assets/map.jpeg">
+      </div>
+      <img
+        src="./assets/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href='./#projects'"
+      />
+    </section>
+    <section id="projects">
+      <p class="section__text__p1">Albatrels Academy</p>
+      <h1 class="title">CLASS OF 2025</h1>
+      <div class="experience-details-container">
+        <div class="about-containers">
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/YEARBOOK-SELFPHOTO/TANNYA.jpg"
+                alt="TANNYA"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">TANNYA</h2>
+            <h3 class="experience-main-title">
+                "Held By Hope.”
+            </h3>
+              <div class="btn-container">
+                <button
+                class="btn btn-color-2 project-btn"
+                onclick="window.open('./assets/DATABASE/TANNYA.pdf')"
+              > 
+                DATABASE
+              </button>
+              </div>
+          </div>
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/YEARBOOK-SELFPHOTO/NAAR.jpg"
+                alt="NAAR"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">NAAR</h2>
+            <h3 class="experience-main-title">
+                "Skin Her Alive.”
+            </h3>
+              <div class="btn-container">
+                <button
+                class="btn btn-color-2 project-btn"
+                onclick="window.open('./assets/DATABASE/NAAR.pdf')"
+              > 
+                DATABASE
+              </button>
+              </div>
+          </div>
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/YEARBOOK-SELFPHOTO/GREOLA.jpg"
+                alt="GREOLA"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">GREOLA</h2>
+            <h3 class="experience-main-title">
+                "Aspire to inspire before you expire.”
+            </h3>
+              <div class="btn-container">
+                <button
+                class="btn btn-color-2 project-btn"
+                onclick="window.open('./assets/DATABASE/GREOLA.pdf')"
+              > 
+                DATABASE
+              </button>
+              </div>
+          </div>
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/YEARBOOK-SELFPHOTO/CHÉRIESH.jpg"
+                alt="CHÉRIESH"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">CHÉRIESH</h2>
+            <h3 class="experience-main-title">
+                "If I desire it, naught shall hinder me.”
+            </h3>
+              <div class="btn-container">
+                <button
+                class="btn btn-color-2 project-btn"
+                onclick="window.open('./assets/DATABASE/CHÉRIESH.pdf')"
+              > 
+                DATABASE
+              </button>
+              </div>
+          </div>
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/YEARBOOK-SELFPHOTO/ISHABELLA.jpg"
+                alt="ISHABELLA"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">ISHABELLA</h2>
+            <h3 class="experience-main-title">
+                "Brain, beauty, behavior.”
+            </h3>
+              <div class="btn-container">
+                <button
+                class="btn btn-color-2 project-btn"
+                onclick="window.open('./assets/DATABASE/ISHABELLA.pdf')"
+              > 
+                DATABASE
+              </button>
+              </div>
+          </div>
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/YEARBOOK-SELFPHOTO/VENUS.jpg"
+                alt="VENUS"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">VENUS</h2>
+            <h3 class="experience-main-title">
+                "Beat it up, no need to win.”
+            </h3>
+              <div class="btn-container">
+                <button
+                class="btn btn-color-2 project-btn"
+                onclick="window.open('./assets/DATABASE/VENUS.pdf')"
+              > 
+                DATABASE
+              </button>
+              </div>
+          </div>
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/YEARBOOK-SELFPHOTO/MANGGALA.jpg"
+                alt="MANGGALA"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">MANGGALA</h2>
+            <h3 class="experience-main-title">
+                "Born off-script, contra mundum.”
+            </h3>
+              <div class="btn-container">
+                <button
+                class="btn btn-color-2 project-btn"
+                onclick="window.open('./assets/DATABASE/MANGGALA.pdf')"
+              > 
+                DATABASE
+              </button>
+              </div>
+          </div>
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/YEARBOOK-SELFPHOTO/RASKAL.jpg"
+                alt="RASKAL"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">RASKAL</h2>
+            <h3 class="experience-main-title">
+                "Focus. Commit. Win.”
+            </h3>
+              <div class="btn-container">
+                <button
+                class="btn btn-color-2 project-btn"
+                onclick="window.open('./assets/DATABASE/RASKAL.pdf')"
+              > 
+                DATABASE
+              </button>
+              </div>
+          </div>
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/YEARBOOK-SELFPHOTO/MARINE.jpg"
+                alt="MARINE"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">MARINE</h2>
+            <h3 class="experience-main-title">
+                "Even Flowers Bleed.”
+            </h3>
+              <div class="btn-container">
+                <button
+                class="btn btn-color-2 project-btn"
+                onclick="window.open('./assets/DATABASE/MARINE.pdf')"
+              > 
+                DATABASE
+              </button>
+              </div>
+          </div>
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/YEARBOOK-SELFPHOTO/KAISTER.jpg"
+                alt="KAISTER"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">KAISTER</h2>
+            <h3 class="experience-main-title">
+                "If I play, I play to win.”
+            </h3>
+              <div class="btn-container">
+                <button
+                class="btn btn-color-2 project-btn"
+                onclick="window.open('./assets/DATABASE/KAISTER.pdf')"
+              > 
+                DATABASE
+              </button>
+              </div>
+          </div>
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/YEARBOOK-SELFPHOTO/JADON.jpg"
+                alt="JADON"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">JADON</h2>
+            <h3 class="experience-main-title">
+                "Only a dead body does not betray.”
+            </h3>
+              <div class="btn-container">
+                <button
+                class="btn btn-color-2 project-btn"
+                onclick="window.open('./assets/DATABASE/JADON.pdf')"
+              > 
+                DATABASE
+              </button>
+              </div>
+          </div>
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/YEARBOOK-SELFPHOTO/LA-NYMA.jpg"
+                alt="LA-NYMA"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">LA-NYMA</h2>
+            <h3 class="experience-main-title">
+                "Turn your wounds into wisdom.”
+            </h3>
+              <div class="btn-container">
+                <button
+                class="btn btn-color-2 project-btn"
+                onclick="window.open('./assets/DATABASE/LA-NYMA.pdf')"
+              > 
+                DATABASE
+              </button>
+              </div>
+          </div>
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/YEARBOOK-SELFPHOTO/SAERIN.jpg"
+                alt="SAERIN"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">SAERIN</h2>
+            <h3 class="experience-main-title">
+                "Stars Shun The Weak.”
+            </h3>
+              <div class="btn-container">
+                <button
+                class="btn btn-color-2 project-btn"
+                onclick="window.open('./assets/DATABASE/SAERIN.pdf')"
+              > 
+                DATABASE
+              </button>
+              </div>
+          </div>
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/YEARBOOK-SELFPHOTO/ODIERA.jpg"
+                alt="ODIERA"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">ODIERA</h2>
+            <h3 class="experience-main-title">
+                "Born to be pretty.”
+            </h3>
+              <div class="btn-container">
+                <button
+                class="btn btn-color-2 project-btn"
+                onclick="window.open('./assets/DATABASE/ODIERA.pdf')"
+              > 
+                DATABASE
+              </button>
+              </div>
+          </div>
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/YEARBOOK-SELFPHOTO/JEVINCIO.jpg"
+                alt="JEVINCIO"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">JEVINCIO</h2>
+            <h3 class="experience-main-title">
+                "Turn it up, break the rules.”
+            </h3>
+              <div class="btn-container">
+                <button
+                class="btn btn-color-2 project-btn"
+                onclick="window.open('./assets/DATABASE/JEVINCIO.pdf')"
+              > 
+                DATABASE
+              </button>
+              </div>
+          </div>
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/YEARBOOK-SELFPHOTO/LEI.jpg"
+                alt="LEI"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">LEI</h2>
+            <h3 class="experience-main-title">
+                "Please save me savior.”
+            </h3>
+              <div class="btn-container">
+                <button
+                class="btn btn-color-2 project-btn"
+                onclick="window.open('./assets/DATABASE/LEI.pdf')"
+              > 
+                DATABASE
+              </button>
+              </div>
+          </div>
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/YEARBOOK-SELFPHOTO/JALEON.jpg"
+                alt="JALEON"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">BHRE</h2>
+            <h3 class="experience-main-title">
+                "Ars longa vita brevis.”
+            </h3>
+              <div class="btn-container">
+                <button
+                class="btn btn-color-2 project-btn"
+                onclick="window.open('./assets/DATABASE/JALEON.pdf')"
+              > 
+                DATABASE
+              </button>
+              </div>
+          </div>
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/YEARBOOK-SELFPHOTO/ELLEWYN.jpg"
+                alt="ELLEWYN"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">ELLEWYN</h2>
+            <h3 class="experience-main-title">
+                "Hold on to the memories.”
+            </h3>
+              <div class="btn-container">
+                <button
+                class="btn btn-color-2 project-btn"
+                onclick="window.open('./assets/DATABASE/ELLEWYN.pdf')"
+              > 
+                DATABASE
+              </button>
+              </div>
+          </div>
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/YEARBOOK-SELFPHOTO/MILDEN.jpg"
+                alt="MILDEN"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">MILDEN</h2>
+            <h3 class="experience-main-title">
+                "Upsidenwod.”
+            </h3>
+              <div class="btn-container">
+                <button
+                class="btn btn-color-2 project-btn"
+                onclick="window.open('./assets/DATABASE/MILDEN.pdf')"
+              > 
+                DATABASE
+              </button>
+              </div>
+          </div>
+                    <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/YEARBOOK-SELFPHOTO/GLENDRXYORA.jpg"
+                alt="GLENDRXYORA"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">GLEN</h2>
+            <h3 class="experience-main-title">
+                "Find me where the flowers are.”
+            </h3>
+              <div class="btn-container">
+                <button
+                class="btn btn-color-2 project-btn"
+                onclick="window.open('./assets/DATABASE/GLENDRXYORA.pdf')"
+              > 
+                DATABASE
+              </button>
+              </div>
+          </div>
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/YEARBOOK-SELFPHOTO/AMYIA.jpg"
+                alt="AMYIA"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">AMYIA</h2>
+            <h3 class="experience-main-title">
+                "B.Y.O.B.”
+            </h3>
+              <div class="btn-container">
+                <button
+                class="btn btn-color-2 project-btn"
+                onclick="window.open('./assets/DATABASE/AMYIA.pdf')"
+              > 
+                DATABASE
+              </button>
+              </div>
+          </div>
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/YEARBOOK-SELFPHOTO/MADĒBEA.jpg"
+                alt="MADĒBEA"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">MADĒBEA</h2>
+            <h3 class="experience-main-title">
+                "Life, Death, Rewind.”
+            </h3>
+              <div class="btn-container">
+                <button
+                class="btn btn-color-2 project-btn"
+                onclick="window.open('./assets/DATABASE/MADĒBEA.pdf')"
+              > 
+                DATABASE
+              </button>
+              </div>
+          </div>
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/YEARBOOK-SELFPHOTO/ARUM.jpg"
+                alt="ARUM"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">ARUM</h2>
+            <h3 class="experience-main-title">
+                "Thank you, Goodbye, Repeat.”
+            </h3>
+              <div class="btn-container">
+                <button
+                class="btn btn-color-2 project-btn"
+                onclick="window.open('./assets/DATABASE/ARUM.pdf')"
+              > 
+                DATABASE
+              </button>
+              </div>
+          </div>
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/YEARBOOK-SELFPHOTO/OZAN.jpg"
+                alt="OZAN"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">OZAN</h2>
+            <h3 class="experience-main-title">
+                "Guess who's back.”
+            </h3>
+              <div class="btn-container">
+                <button
+                class="btn btn-color-2 project-btn"
+                onclick="window.open('./assets/DATABASE/OZAN.pdf')"
+              > 
+                DATABASE
+              </button>
+              </div>
+          </div>
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/YEARBOOK-SELFPHOTO/JAIMERSON.jpg"
+                alt="JAIMERSON"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">JAIMERSON</h2>
+            <h3 class="experience-main-title">
+                "Young, Dumb, & Broke.”
+            </h3>
+              <div class="btn-container">
+                <button
+                class="btn btn-color-2 project-btn"
+                onclick="window.open('./assets/DATABASE/JAIMERSON.pdf')"
+              > 
+                DATABASE
+              </button>
+              </div>
+          </div>
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/YEARBOOK-SELFPHOTO/JOSE.jpg"
+                alt="JOSE"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">JOSE</h2>
+            <h3 class="experience-main-title">
+                "I don't chase, I choose.”
+            </h3>
+              <div class="btn-container">
+                <button
+                class="btn btn-color-2 project-btn"
+                onclick="window.open('./assets/DATABASE/JOSE.pdf')"
+              > 
+                DATABASE
+              </button>
+              </div>
+          </div>
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/YEARBOOK-SELFPHOTO/JARX.jpg"
+                alt="JARX"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">D'JARXZON</h2>
+            <h3 class="experience-main-title">
+                "Ruthless drive quiet storm.”
+            </h3>
+              <div class="btn-container">
+                <button
+                class="btn btn-color-2 project-btn"
+                onclick="window.open('./assets/DATABASE/JARX.pdf')"
+              > 
+                DATABASE
+              </button>
+              </div>
+          </div>
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/YEARBOOK-SELFPHOTO/DHIRELL.jpg"
+                alt="DHIRELL"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">DHIRELL</h2>
+            <h3 class="experience-main-title">
+                "Lamentations 3:22.”
+            </h3>
+              <div class="btn-container">
+                <button
+                class="btn btn-color-2 project-btn"
+                onclick="window.open('./assets/DATABASE/DHIRELL.pdf')"
+              > 
+                DATABASE
+              </button>
+              </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="contact">
+      <p class="section__text__p1">Get in Touch</p>
+      <h1 class="title">SEBAT</h1>
+      <div class="contact-info-upper-container">
+        <div class="contact-info-container">
+          <a href="https://chat.whatsapp.com/FsMrSmH0X2NBsjxhEp78Lq">Seputar Albatrels</a>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <nav>
+        <div class="nav-links-container">
+          <ul class="nav-links">
+            <li><a href="#about">ABOUT</a></li>
+            <li><a href="#experience">MAP</a></li>
+            <li><a href="#projects">STUDENTS</a></li>
+            <li><a href="#contact">SEBAT</a></li>
+          </ul>
+        </div>
+      </nav>
+      <p>Copyright &#169; 2025 Jaleon Albatrels. All Rights Reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
