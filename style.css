@@ -492,14 +492,6 @@ article .icon {
   padding: 40px 0;
 }
 
-@media (max-width: 768px) {
-  #projects {
-    width: 100%;
-    margin: 0;
-    padding: 20px 0;
-  }
-}
-
 #projects .experience-details-container {
   max-width: calc(100% - 20rem);
   margin: 0 auto;
@@ -533,6 +525,20 @@ article .icon {
 }
 
 @media (max-width: 480px) {
+  #projects {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  section {
+    margin: 0;
+  }
+
+  #projects .experience-details-container {
+    max-width: 100%;
+    padding: 0 8px; /* jarak tipis kiri-kanan */
+  }
+  
   .about-containers {
     display: grid;
     grid-template-columns: repeat(2, minmax(150px, 1fr));
