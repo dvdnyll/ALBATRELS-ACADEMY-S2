@@ -39,6 +39,8 @@ nav {
   justify-content: space-around;
   align-items: center;
   height: 17vh;
+  position: relative;
+  z-index: 1000;
 }
 
 .nav-links {
@@ -118,6 +120,7 @@ a:hover {
   color: white;
   text-decoration: none;
   transition: all 0.3 ease-in-out;
+  z-index: 2000;
 }
 
 .menu-links li {
@@ -538,7 +541,7 @@ article .icon {
     max-width: 100%;
     padding: 0 8px; /* jarak tipis kiri-kanan */
   }
-  
+
   .about-containers {
     display: grid;
     grid-template-columns: repeat(2, minmax(150px, 1fr));
