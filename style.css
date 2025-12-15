@@ -656,3 +656,201 @@ footer {
 footer p {
   text-align: center;
 }
+
+/* LOCKER ROOM SECTION */
+
+#locker-room {
+  position: relative;
+  background-image: url('./assets/99.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  padding: 120px 0 80px;
+}
+
+/* gradasi hitam atas */
+.locker-gradient {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 140px;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.85), rgba(0,0,0,0));
+  z-index: 1;
+}
+
+/* gradasi hitam bawah */
+.locker-gradient-bottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 140px;
+  background: linear-gradient(
+    to top,
+    rgba(0,0,0,0.85),
+    rgba(0,0,0,0)
+  );
+  z-index: 1;
+  pointer-events: none;
+}
+
+.locker-header {
+  text-align: center;
+  margin-bottom: 50px;
+  position: relative;
+  z-index: 2;
+}
+
+.locker-sub {
+  color: #aaa;
+  margin-top: 6px;
+  font-size: 0.9rem;
+}
+
+.locker-scroll {
+  display: flex;
+  gap: 0; /* HILANGKAN JARAK TOTAL */
+  overflow-x: auto;
+  padding: 20px 10px;
+  scroll-snap-type: x mandatory;
+}
+
+.locker-scroll::-webkit-scrollbar {
+  height: 6px;
+}
+
+.locker {
+  flex: 0 0 auto;
+  width: clamp(90px, 18vw, 160px);
+  margin: 0; /* PASTIKAN TIDAK ADA JARAK */
+  padding: 0;
+  scroll-snap-align: center;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+@media (max-width: 480px) {
+  .locker {
+    width: 72px;       /* KECIL & SEJALAN DENGAN PROJECT */
+  }
+
+  .locker img {
+    opacity: 0.95;
+  }
+}
+
+.locker img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  border-radius: 0px;
+}
+
+@media (max-width: 480px) {
+  .locker.active {
+    transform: scale(1.04);
+  }
+}
+
+/* pop-up saat di tengah */
+.locker.active {
+  transform: scale(1.08);
+  filter: brightness(1.15);
+}
+
+/* ===== LOCKER FRAME ===== */
+
+.locker-frame {
+  width: 90%;
+  margin: 0 auto;
+  padding: 20px 10px 30px;
+  background: rgba(0, 0, 0, 0.55); /* bingkai */
+  border: 1px solid rgba(255,255,255,0.15);
+  overflow: hidden;
+}
+
+@media (max-width: 480px) {
+  .locker-frame {
+    width: 100%;
+    padding: 8px 0 14px;
+    border-left: none;
+    border-right: none;
+    background: rgba(0,0,0,0.45);
+  }
+}
+
+@media (max-width: 480px) {
+  .locker-scroll {
+    padding: 6px 12px;
+  }
+}
+
+
+/* loker di dalam bingkai */
+.locker-scroll {
+  display: flex;
+  gap: 0;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding: 10px 0;
+}
+
+/* SEMBUNYIKAN scrollbar default */
+.locker-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+/* ===== SLIDER ===== */
+
+.locker-slider {
+  width: 100%;
+  margin-top: 16px;
+  appearance: none;
+  height: 3px;
+  background: rgba(255,255,255,0.3);
+  outline: none;
+  cursor: pointer;
+}
+
+/* knob slider */
+.locker-slider::-webkit-slider-thumb {
+  appearance: none;
+  width: 40px;
+  height: 8px;
+  background: rgb(235, 164, 11); /* warna tombol */
+  cursor: pointer;
+}
+
+.locker-slider::-moz-range-thumb {
+  width: 40px;
+  height: 8px;
+  background: rgb(235, 164, 11);
+  border: none;
+}
+
+@media (max-width: 600px) {
+  .locker-frame {
+    width: 95%;
+    padding: 14px 6px 20px;
+  }
+
+  .locker-slider::-webkit-slider-thumb {
+    width: 30px;
+  }
+}
+
+.locker-inner {
+  max-width: calc(100% - 20rem); /* sejajar dengan section margin 10rem */
+  margin: 0 auto;
+  position: relative;
+}
+
+@media (max-width: 768px) {
+  .locker-inner {
+    max-width: 100%;
+    padding: 0 1rem;
+  }
+}
