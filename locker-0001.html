@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Locker Room</title>
+  <link rel="icon" href="./assets/profile-pic.png" type="image/x-icon" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* ===== PAGE LAYOUT ===== */
+    body {
+      margin: 0;
+      background: black;
+    }
+
+    .locker-detail-page {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: black;
+    }
+
+    /* container agar desktop ada sisa hitam kiri-kanan */
+    .locker-image-wrapper {
+      position: relative;
+      height: 100vh;
+      width: auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .locker-image-wrapper img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      height: 100vh;
+      width: auto;
+      object-fit: contain;
+    }
+
+    .locker-open {
+      opacity: 0;
+      transition: opacity 1.4s ease;
+      pointer-events: none;
+    }
+
+    .locker-open.show {
+      opacity: 1;
+    }
+
+    .locker-open.show {
+      opacity: 1;
+    }
+
+    /* mobile: gambar full layar */
+    @media (max-width: 768px) {
+      .locker-image-wrapper img {
+        width: 100vw;
+        height: 100vh;
+        object-fit: cover;
+      }
+    }
+
+    /* ===== BUTTON ===== */
+    .open-locker-btn {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 10;
+    }
+
+    .open-locker-btn .btn {
+      box-shadow: 0 10px 30px rgba(0,0,0,0.65);
+    }
+
+    /* animasi pop up saat klik */
+    .open-locker-btn.clicked {
+      animation: pop 0.35s ease;
+    }
+
+    @keyframes pop {
+      0% { transform: translate(-50%, -50%) scale(1); }
+      50% { transform: translate(-50%, -50%) scale(1.15); }
+      100% { transform: translate(-50%, -50%) scale(1); }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="locker-detail-page">
+    <div class="locker-image-wrapper">
+      <!-- GANTI src SESUAI PNG LOCKER -->
+      <img src="./assets/LOCKER/CLOSE/CLOSE-0001.png" alt="Locker Detail" class="locker-base" />
+      <img src="./assets/LOCKER/OPEN/OPEN-0001.png" alt="Locker Open" class="locker-open" />
+
+      <div class="open-locker-btn">
+        <!-- pakai tombol yang SAMA PERSIS dengan Get Student ID -->
+        <button class="btn btn-color-2" id="openLockerBtn">
+          Open This Locker
+        </button>
+      </div>
+    </div>
+  </div>
+
+<script>
+  const btn = document.getElementById('openLockerBtn');
+  const openImg = document.querySelector('.locker-open');
+
+  btn.addEventListener('click', () => {
+
+    /* 1. tombol pop (klik dulu) */
+    btn.classList.add('clicked');
+
+    /* 2. setelah pop, tombol fade out */
+    setTimeout(() => {
+      btn.style.transition = 'opacity 0.5s ease';
+      btn.style.opacity = '0';
+    }, 350);
+
+    /* 3. setelah tombol hilang, baru gambar open muncul */
+    setTimeout(() => {
+      btn.style.display = 'none';
+      openImg.classList.add('show');
+    }, 900);
+
+  });
+</script>
+
+</body>
+</html>
