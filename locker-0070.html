@@ -14,6 +14,7 @@
       background: black;
     }
 
+    /* ===== BACK BUTTON (SAMA DENGAN FILE LAMA) ===== */
     .back-btn {
       position: fixed;
       top: 20px;
@@ -42,6 +43,7 @@
       transform: translateY(-1px);
     }
 
+    /* ===== PAGE ===== */
     .locker-detail-page {
       min-height: 100vh;
       display: flex;
@@ -65,11 +67,7 @@
       font-size: clamp(2rem, 4vw, 3rem);
     }
 
-    .locker-sub {
-      margin-top: 6px;
-      opacity: 0.7;
-    }
-
+    /* ===== IMAGE WRAPPER ===== */
     .locker-image-wrapper {
       position: relative;
       height: calc(100vh - 220px);
@@ -80,6 +78,7 @@
       z-index: 1;
     }
 
+    /* TOP SHADOW */
     .locker-image-wrapper::before {
       content: "";
       position: absolute;
@@ -100,6 +99,7 @@
       pointer-events: none;
     }
 
+    /* SIDE SHADOW */
     .locker-shadow-sides {
       position: absolute;
       inset: 0;
@@ -119,22 +119,15 @@
 
     .locker-shadow-sides::before {
       left: 0;
-      background: linear-gradient(
-        to right,
-        rgba(0, 0, 0, 0.55),
-        rgba(0, 0, 0, 0)
-      );
+      background: linear-gradient(to right, rgba(0,0,0,0.55), transparent);
     }
 
     .locker-shadow-sides::after {
       right: 0;
-      background: linear-gradient(
-        to left,
-        rgba(0, 0, 0, 0.55),
-        rgba(0, 0, 0, 0)
-      );
+      background: linear-gradient(to left, rgba(0,0,0,0.55), transparent);
     }
 
+    /* ===== IMAGES ===== */
     .locker-image-wrapper img {
       position: absolute;
       height: 100%;
@@ -155,12 +148,12 @@
       pointer-events: auto;
     }
 
-    /* IMAGE KE-2 */
     .locker-open-2 {
       opacity: 0;
       pointer-events: none;
     }
 
+    /* ===== BUTTON ===== */
     .open-locker-btn {
       position: absolute;
       top: 50%;
@@ -184,7 +177,6 @@
         margin-top: 70px;
         margin-bottom: 20px;
       }
-
       .locker-image-wrapper {
         height: calc(100vh - 200px);
       }
@@ -194,79 +186,110 @@
 
 <body>
 
-  <div class="back-btn">
-    <a href="index.html">
-      <button>← Back</button>
-    </a>
+<div class="back-btn">
+  <a href="index.html">
+    <button>← Back</button>
+  </a>
+</div>
+
+<div class="locker-detail-page">
+
+  <div class="locker-header">
+    <h1 class="title">#0055 LOCKER</h1>
   </div>
 
-  <div class="locker-detail-page">
+  <div class="locker-image-wrapper">
 
-    <div class="locker-header">
-      <h1 class="title">#0055 LOCKER</h1>
-      <p class="locker-sub">
-        <a href="https://x.com/albatrelsbased" target="_blank">@albatrelsbased</a>
-      </p>
+    <div class="locker-shadow-sides"></div>
+
+    <img src="./assets/LOCKER/CLOSE/CLOSE-0055.png" alt="Locker Close">
+
+    <img src="./assets/LOCKER/OPEN/OPEN-0070.png"
+         alt="Locker Open"
+         class="locker-open">
+
+    <img src="./assets/LOCKER/OPEN/OPEN-0088.png"
+         alt="Locker Open 2"
+         class="locker-open locker-open-2">
+
+    <div class="open-locker-btn">
+      <button class="btn btn-color-2" id="openLockerBtn">
+        Open This Locker
+      </button>
     </div>
 
-    <div class="locker-image-wrapper">
-
-      <div class="locker-shadow-sides"></div>
-
-      <img src="./assets/LOCKER/CLOSE/CLOSE-0055.png" alt="Locker Close">
-
-      <img src="./assets/LOCKER/OPEN/OPEN-0070.png"
-           alt="Locker Open"
-           class="locker-open">
-
-      <img src="./assets/LOCKER/OPEN/OPEN-0088.png"
-           alt="Locker Open 2"
-           class="locker-open locker-open-2">
-
-      <div class="open-locker-btn">
-        <button class="btn btn-color-2" id="openLockerBtn">
-          Open This Locker
+    <!-- PHONE BUTTON -->
+    <div id="phoneBtn" style="
+      position:absolute;
+      bottom:40px;
+      opacity:0;
+      pointer-events:none;
+      transition:opacity 1s ease;
+      z-index:5;
+    ">
+      <a href="https://tulisann.medium.com/m-1e944a4c0ac4" target="_blank">
+        <button class="btn btn-color-2">
+          OPEN THIS PHONE
         </button>
-      </div>
-
+      </a>
     </div>
+
   </div>
+</div>
 
-  <!-- SCRIPT LAMA (TIDAK DIUBAH) -->
-  <script>
-    const btn = document.getElementById('openLockerBtn');
-    const openImg = document.querySelector('.locker-open');
+<!-- SCRIPT LAMA (TIDAK DIUBAH) -->
+<script>
+  const btn = document.getElementById('openLockerBtn');
+  const openImg = document.querySelector('.locker-open');
 
-    btn.addEventListener('click', () => {
-      btn.classList.add('clicked');
+  btn.addEventListener('click', () => {
+    btn.classList.add('clicked');
 
-      setTimeout(() => {
-        btn.style.transition = 'opacity 0.5s ease';
-        btn.style.opacity = '0';
-      }, 350);
+    setTimeout(() => {
+      btn.style.transition = 'opacity 0.5s ease';
+      btn.style.opacity = '0';
+    }, 350);
 
-      setTimeout(() => {
-        btn.style.display = 'none';
-        openImg.classList.add('show');
-      }, 900);
-    });
-  </script>
+    setTimeout(() => {
+      btn.style.display = 'none';
+      openImg.classList.add('show');
+    }, 900);
+  });
+</script>
 
-  <!-- SCRIPT BARU -->
-  <script>
-    const openImg1 = document.querySelector('.locker-open');
-    const openImg2 = document.querySelector('.locker-open-2');
+<!-- SCRIPT BARU (KLIK TENGAH GAMBAR) -->
+<script>
+  const openImg1 = document.querySelector('.locker-open');
+  const openImg2 = document.querySelector('.locker-open-2');
+  const phoneBtn = document.getElementById('phoneBtn');
 
-    openImg1.addEventListener('click', () => {
-      if (!openImg1.classList.contains('show')) return;
+  openImg1.addEventListener('click', (e) => {
+    if (!openImg1.classList.contains('show')) return;
 
-      openImg1.classList.remove('show');
+    const rect = openImg1.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
 
-      setTimeout(() => {
-        openImg2.classList.add('show');
-      }, 50);
-    });
-  </script>
+    const centerX = rect.width / 2;
+    const centerY = rect.height / 2;
+
+    const toleranceX = rect.width * 0.2;
+    const toleranceY = rect.height * 0.2;
+
+    if (
+      Math.abs(x - centerX) > toleranceX ||
+      Math.abs(y - centerY) > toleranceY
+    ) return;
+
+    openImg1.classList.remove('show');
+
+    setTimeout(() => {
+      openImg2.classList.add('show');
+      phoneBtn.style.opacity = '1';
+      phoneBtn.style.pointerEvents = 'auto';
+    }, 150);
+  });
+</script>
 
 </body>
 </html>
