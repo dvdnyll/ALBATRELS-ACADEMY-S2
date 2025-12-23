@@ -854,3 +854,138 @@ footer p {
     padding: 0 1rem;
   }
 }
+
+/* ===== FEELING LETTER / PADLET ===== */
+
+#feeling-letter {
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  padding: 80px 0;
+}
+
+.padlet-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: calc(100% - 20rem); /* sejajar dengan section lain */
+  margin: 40px auto 0;
+  aspect-ratio: 16 / 9; /* responsive */
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.padlet-wrapper iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .padlet-wrapper {
+    max-width: 100%;
+    margin: 24px auto 0;
+    aspect-ratio: 4 / 5; /* lebih nyaman di HP */
+    border-radius: 10px;
+  }
+}
+/* ===== PADLET GRADIENT OVERLAY ===== */
+
+.padlet-wrapper::before,
+.padlet-wrapper::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 120px;
+  z-index: 2;
+  pointer-events: none;
+}
+
+/* gradasi hitam atas */
+.padlet-wrapper::before {
+  top: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.85),
+    rgba(0, 0, 0, 0)
+  );
+}
+
+/* gradasi hitam bawah */
+.padlet-wrapper::after {
+  bottom: 0;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.85),
+    rgba(0, 0, 0, 0)
+  );
+}
+
+/* Mobile: gradasi sedikit lebih tipis */
+@media (max-width: 768px) {
+  .padlet-wrapper::before,
+  .padlet-wrapper::after {
+    height: 90px;
+  }
+}
+
+/* ===== SEBAT IMAGE GRADIENT ===== */
+
+.sebat-image {
+  position: relative;
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-top: 40px;
+  overflow: hidden;
+}
+
+.sebat-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+/* overlay gradasi */
+.sebat-image::before,
+.sebat-image::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 140px;
+  z-index: 2;
+  pointer-events: none;
+}
+
+/* gradasi hitam atas */
+.sebat-image::before {
+  top: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0,0,0,0.85),
+    rgba(0,0,0,0)
+  );
+}
+
+/* gradasi hitam bawah */
+.sebat-image::after {
+  bottom: 0;
+  background: linear-gradient(
+    to top,
+    rgba(0,0,0,0.95),
+    rgba(0,0,0,0)
+  );
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .sebat-image::before,
+  .sebat-image::after {
+    height: 90px;
+  }
+}
+
