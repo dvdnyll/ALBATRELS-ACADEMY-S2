@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>DATABASE ALBATRELS, CLASS OF 2025</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #0e0e0e;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      text-align: center;
+    }
+    .box {
+      background: #151515;
+      padding: 30px;
+      border-radius: 12px;
+      width: 100%;
+      max-width: 420px;
+    }
+    input {
+      width: 100%;
+      padding: 12px;
+      margin-top: 15px;
+      border-radius: 8px;
+      border: none;
+      font-size: 16px;
+    }
+    button {
+      margin-top: 20px;
+      padding: 12px 20px;
+      border-radius: 8px;
+      border: none;
+      background: white;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    .result {
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="box">
+    <h1>DATABASE ALBATRELS</h1>
+    <p>CLASS OF 2025</p>
+
+    <input
+      type="text"
+      id="lockerCode"
+      placeholder="Enter Locker Code (e.g. 0055)"
+    />
+
+    <button onclick="searchData()">Search</button>
+
+    <div class="result" id="result"></div>
+  </div>
+
+<script src="database.js"></script>
+</body>
+</html>
