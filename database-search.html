@@ -240,6 +240,15 @@ fetch("database.json")
 function formatIssue(issue) {
   if (!issue) return "-";
 
+  // kalau isinya TOMAT
+  if (issue.trim().toUpperCase() === "TOMAT") {
+    return "Albatrels TOMAT";
+  }
+
+  if (issue.trim().toUpperCase() === "TOM") {
+    return "Albatrels Leader";
+  }
+
   const [code, level] = issue.split(" ");
 
   if (code === "BAT") return `Albatros ${level}`;
@@ -266,7 +275,9 @@ function searchDatabase(){
 
   const score = data.RESULTS ?? "-";
 
-  const validReport = /^(Petrels|Albatros)\s([1-9]|1\d|2[0-1])$/;
+  const validReport =
+  /^(Petrels|Albatros)\s([1-9]|1\d|2[0-1])$|^Albatrels TOMAT$|^Albatrels Leader$/;
+
 
   let html = `
     <div class="result-card">
@@ -413,6 +424,7 @@ function searchDatabase(){
 
 </body>
 </html>
+
 
 
 
