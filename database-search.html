@@ -261,7 +261,7 @@ function searchDatabase(){
   resultBox.style.display = "block";
 
   const firstName = data.NAMA.split(" ")[0].toUpperCase();
-  const rawReport = data.Column23 || "-";
+  const rawReport = data.Column22 || "-";
   const report = formatIssue(rawReport);
 
   const score = data.RESULTS ?? "-";
@@ -288,7 +288,7 @@ function searchDatabase(){
           <div class="report-info">
             <p><strong>Number:</strong> ${locker}</p>
             <p><strong>Name:</strong> ${data.NAMA}</p>
-            <p><strong>Class:</strong> ${data.CLASS ?? "-"}</p>
+            <p><strong>Class:</strong> ${data.Column23 ?? "-"}</p>
             <p><strong>Final score:</strong> ${score}</p>
             <p><strong>Issue:</strong> Success to be ${report}</p>
           </div>
@@ -413,6 +413,7 @@ function searchDatabase(){
 
 </body>
 </html>
+
 
 
 
